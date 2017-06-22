@@ -5,7 +5,7 @@ set -e
 
 case "$1" in
   configure)
-    sysctl -p >/dev/null 2>&1 || true
+    sysctl -p /etc/sysctl.d/emervpn.conf >/dev/null 2>&1 || true
     systemctl daemon-reload >/dev/null 2>&1 || true
     systemctl restart emervpn >/dev/null 2>&1 || true
     systemctl enable emervpn >/dev/null 2>&1 || true
