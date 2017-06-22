@@ -1,2 +1,2 @@
 Defaults:nobody !requiretty
-nobody ALL = NOPASSWD: /sbin/iptables
+nobody ALL = NOPASSWD: /sbin/iptables, /sbin/modprobe ip_tables

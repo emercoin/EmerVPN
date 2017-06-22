@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo /sbin/iptables -t nat -A POSTROUTING -s $ifconfig_pool_remote_ip -j MASQUERADE || true >/dev/null 2>&1
+sudo /sbin/modprobe ip_tables >/dev/null 2>&1
+sudo /sbin/iptables -t nat -A POSTROUTING -s $ifconfig_pool_remote_ip -j MASQUERADE >/dev/null 2>&1
