@@ -1,0 +1,6 @@
+#############################
+# EmerVPN EMCSSH users list #
+#############################
+
+# EMCSSH users list to allow peering
+# You can use recursiveness to create nested user groups

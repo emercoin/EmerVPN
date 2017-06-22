@@ -1,0 +1,6 @@
+####################################
+# EmerVPN EMCSSL serials whitelist #
+####################################
+
+# EMCSSL certificate serials whitelist to allow peering
+# Specify the serial numbers of the certificates that are allowed to access

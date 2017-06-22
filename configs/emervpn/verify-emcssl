@@ -1,0 +1,52 @@
+#!/bin/bash
+
+[ "$1" != "0" ] && exit 0
+[ ! -f /usr/bin/emercoin-cli ] && exit 1
+
+function checkserial {
+  local result=0 nvs names values i name digest orighash peerhash result
+  nvs="$(emercoin-cli name_show "ssl:$1")"
+  readarray -t names  < <(echo "$nvs" | awk -F\" 'NF>=3 {print $2}')
+  readarray -t values < <(echo "$nvs" | awk -F\" 'NF>=3 {print $4}')
+  let i=0
+  for name in ${names[@]}
+  do
+    [ "$name" == "value" ] && {
+      digest="$(echo ${values[i]} | cut -d '=' -f1)"
+      orighash="$(echo ${values[i]} | cut -d '=' -f2)"
+    }
+    let i++
+  done
+  case "$digest" in
+    sha1|mdc2|ripemd160|sha224|sha256|sha384|sha512|md2|md4|md5|dss1)
+      peerhash="$(cat $peer_cert | grep -v CERTIFICATE | base64 --decode | openssl dgst "-$digest" | sed -e 's/(stdin)= //')"
+      [ "$peerhash" == "$orighash" ] && result=1
+      ;;
+  esac
+  echo $result
+}
+
+function whitelist {
+  local line
+  [ "$1" ] && {
+    while read line; do
+      echo "$line"
+    done < <(sed -e 's/|\+/\n/g' "$1" | sed -e '/^[[:space:]]*$/d' -e '/^[[:space:]]*#/d' -e '/^[[:space:]]*;/d' -e 's/^[ \t]*//' -e 's/^[\@]*//g')
+  }
+  [ "$2" ] && {
+    while read line; do
+      echo "$line"
+    done < <(emcssh emervpn | sed -e '/^[[:space:]]*$/d' -e '/^[[:space:]]*#/d' -e '/^[[:space:]]*;/d' -e 's/^[ \t]*//')
+  }
+}
+
+serial="$(printf '%x' $tls_serial_0)"
+[ $(checkserial "$serial") -eq 1 ] && {
+  readarray -t serials < <(whitelist "$emcssl_whitelist" "$emcssh_whitelist")
+  for((k=0;k<${#serials[@]};k++))
+  do
+    [ "${serials[$k]}" == "$serial" ] && exit 0
+  done
+}
+
+exit 1

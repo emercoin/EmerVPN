@@ -1,0 +1,83 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: O=EmerCoin, OU=EMCSSL, CN=EmerCoin WWW PKI/emailAddress=team@emercoin.com/UID=EMC
+        Validity
+            Not Before: Jun 19 16:45:46 2017 GMT
+            Not After : Jun 17 16:45:46 2027 GMT
+        Subject: C=US, ST=MD, L=Potomac, O=Emercoin, OU=EmerVPN Server, CN=emervpn/name=emervpn/emailAddress=support@emercoin.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e7:2b:cd:df:78:b9:50:30:8a:49:5e:05:dd:63:
+                    dd:ae:66:a8:0d:92:99:38:2a:e2:09:c9:3a:5b:8b:
+                    ae:ff:cb:94:45:81:27:ce:8e:d9:0b:66:bb:1b:ea:
+                    7f:3d:fe:ec:9e:12:02:b2:83:16:30:72:f9:ff:e2:
+                    96:9c:3c:ac:28:66:af:02:4b:53:89:23:4a:ef:96:
+                    3d:b7:fd:e4:06:ad:e5:8f:41:2a:0f:82:d5:ed:e6:
+                    08:11:9b:b8:9f:da:43:0c:2d:2e:94:b3:e0:de:ab:
+                    8c:7a:34:60:ee:5d:03:5a:73:99:6e:56:62:c4:c9:
+                    0a:e9:48:cd:55:5b:37:94:1e:6b:24:54:19:d9:1f:
+                    34:9b:a6:cf:42:b9:d9:5b:a2:72:73:91:db:5b:cf:
+                    a6:bf:92:eb:73:c6:93:fc:cc:78:21:34:11:f1:c0:
+                    b0:f8:fa:51:dc:3c:22:95:91:da:87:02:1d:69:e6:
+                    f5:a6:ad:8c:9c:3d:83:a7:4e:a3:bb:b8:0b:65:69:
+                    90:fa:f2:fa:f9:c5:58:cb:0e:51:35:f4:d0:63:99:
+                    9b:d1:ad:1e:a1:73:63:57:cd:cb:6f:62:2e:0d:0c:
+                    28:02:98:11:77:4f:4b:1a:32:e0:97:d2:e8:02:1b:
+                    7d:e9:9e:9b:d1:17:41:73:e3:ab:b3:b9:c2:47:78:
+                    b9:b7
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Cert Type: 
+                SSL Server
+            Netscape Comment: 
+                Easy-RSA Generated Server Certificate
+            X509v3 Subject Key Identifier: 
+                72:2F:C4:D3:36:EA:7E:2F:BA:9A:8C:CC:A3:21:70:4D:AB:05:05:CC
+            X509v3 Authority Key Identifier: 
+                keyid:71:77:1E:3F:B8:6B:00:AF:AA:27:51:98:A8:8F:C3:E2:87:E0:F2:96
+                DirName:/O=EmerCoin/OU=EMCSSL/CN=EmerCoin WWW PKI/emailAddress=team@emercoin.com/UID=EMC
+                serial:CD:0A:B3:39:4E:D2:31:22
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:emervpn
+    Signature Algorithm: sha256WithRSAEncryption
+         af:2b:98:56:6b:60:2d:ac:74:5d:1f:f9:8f:82:4b:4c:0e:f3:
+         b1:ed:dc:b2:f8:2f:af:64:1d:d3:53:5d:f0:ba:5c:8a:0a:25:
+         e0:3c:0c:d8:31:7a:a9:f6:a0:ce:e8:db:b8:8a:1c:dd:ff:d7:
+         fb:f8:3c:0d:6d:a5:87:21:22:12
+-----BEGIN CERTIFICATE-----
+MIIEKzCCA9WgAwIBAgIBATANBgkqhkiG9w0BAQsFADB2MREwDwYDVQQKDAhFbWVy
+Q29pbjEPMA0GA1UECwwGRU1DU1NMMRkwFwYDVQQDDBBFbWVyQ29pbiBXV1cgUEtJ
+MSAwHgYJKoZIhvcNAQkBFhF0ZWFtQGVtZXJjb2luLmNvbTETMBEGCgmSJomT8ixk
+AQEMA0VNQzAeFw0xNzA2MTkxNjQ1NDZaFw0yNzA2MTcxNjQ1NDZaMIGhMQswCQYD
+VQQGEwJVUzELMAkGA1UECBMCTUQxEDAOBgNVBAcTB1BvdG9tYWMxETAPBgNVBAoT
+CEVtZXJjb2luMRcwFQYDVQQLEw5FbWVyVlBOIFNlcnZlcjEQMA4GA1UEAxMHZW1l
+cnZwbjEQMA4GA1UEKRMHZW1lcnZwbjEjMCEGCSqGSIb3DQEJARYUc3VwcG9ydEBl
+bWVyY29pbi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDnK83f
+eLlQMIpJXgXdY92uZqgNkpk4KuIJyTpbi67/y5RFgSfOjtkLZrsb6n89/uyeEgKy
+gxYwcvn/4pacPKwoZq8CS1OJI0rvlj23/eQGreWPQSoPgtXt5ggRm7if2kMMLS6U
+s+Deq4x6NGDuXQNac5luVmLEyQrpSM1VWzeUHmskVBnZHzSbps9CudlbonJzkdtb
+z6a/kutzxpP8zHghNBHxwLD4+lHcPCKVkdqHAh1p5vWmrYycPYOnTqO7uAtlaZD6
+8vr5xVjLDlE19NBjmZvRrR6hc2NXzctvYi4NDCgCmBF3T0saMuCX0ugCG33pnpvR
+F0Fz46uzucJHeLm3AgMBAAGjggFYMIIBVDAJBgNVHRMEAjAAMBEGCWCGSAGG+EIB
+AQQEAwIGQDA0BglghkgBhvhCAQ0EJxYlRWFzeS1SU0EgR2VuZXJhdGVkIFNlcnZl
+ciBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUci/E0zbqfi+6mozMoyFwTasFBcwwgagG
+A1UdIwSBoDCBnYAUcXceP7hrAK+qJ1GYqI/D4ofg8paheqR4MHYxETAPBgNVBAoM
+CEVtZXJDb2luMQ8wDQYDVQQLDAZFTUNTU0wxGTAXBgNVBAMMEEVtZXJDb2luIFdX
+VyBQS0kxIDAeBgkqhkiG9w0BCQEWEXRlYW1AZW1lcmNvaW4uY29tMRMwEQYKCZIm
+iZPyLGQBAQwDRU1DggkAzQqzOU7SMSIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYD
+VR0PBAQDAgWgMBIGA1UdEQQLMAmCB2VtZXJ2cG4wDQYJKoZIhvcNAQELBQADQQCv
+K5hWa2AtrHRdH/mPgktMDvOx7dyy+C+vZB3TU13wulyKCiXgPAzYMXqp9qDO6Nu4
+ihzd/9f7+DwNbaWHISIS
+-----END CERTIFICATE-----

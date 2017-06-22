@@ -1,0 +1,10 @@
+/etc/emercoin/emcssh.keys.d/emervpn
+/etc/emervpn/client.conf
+/etc/emervpn/client.ovpn
+/etc/emervpn/dh2048.pem
+/etc/emervpn/emcssl.whitelist
+/etc/emervpn/emervpn.conf
+/etc/emervpn/emervpn.crt
+/etc/emervpn/emervpn.key
+/etc/sudoers.d/emervpn
+/etc/sysctl.d/emervpn.conf
