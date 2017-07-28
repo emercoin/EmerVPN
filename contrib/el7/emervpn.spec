@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        EmerVPN Service
 Group:          Applications/Internet
 Vendor:         Aspanta Limited
-License:        GPLv3
+License:        MIT
 URL:            http://www.emercoin.com
 Source0:        %{name}.tar.gz
 BuildArch:      noarch

@@ -36,7 +36,7 @@ function whitelist {
   [ "$2" ] && {
     while read line; do
       echo "$line"
-    done < <(emcssh emervpn | sed -e '/^[[:space:]]*$/d' -e '/^[[:space:]]*#/d' -e '/^[[:space:]]*;/d' -e 's/^[ \t]*//')
+    done < <(/usr/sbin/emcssh emervpn | sed -e '/^[[:space:]]*$/d' -e '/^[[:space:]]*#/d' -e '/^[[:space:]]*;/d' -e 's/^[ \t]*//')
   }
 }
 
