@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# Default parameters
+#
+PROJECT="emervpn"
+SOURCES="$(dirname $(readlink -m $0))/../../.."
+WORKDIR="$(dirname $(readlink -m $0))/ARTIFACTS"
+
+#
+# Reset parameters by commandline options
+#
+for i in "$@"
+do
+  case $i in
+    -p=*|--project=*)
+      PROJECT="${i#*=}"
+    shift
+    ;;
+    -s=*|--sources=*)
+      SOURCES="${i#*=}"
+    shift
+    ;;
+    -w=*|--workdir=*)
+      WORKDIR="${i#*=}"
+    shift
+    ;;
+    *)
+      echo "Unknown option found. Terminating."
+      exit 1
+    ;;
+  esac
+done
+
+#
+# Prepare sources
+#
+rm -rf $WORKDIR
+
+mkdir -p $WORKDIR/$PROJECT/DEBIAN
+cp -rf $SOURCES/builders/debian/jessie/conf/* $WORKDIR/$PROJECT/DEBIAN/
+
+mkdir -p $WORKDIR/$PROJECT/etc/emervpn
+cp -rf $SOURCES/configs/emervpn/* $WORKDIR/$PROJECT/etc/emervpn/
+
+mkdir -p $WORKDIR/$PROJECT/etc/emercoin/emcssh.keys.d
+cp -rf $SOURCES/configs/emcssh/* $WORKDIR/$PROJECT/etc/emercoin/emcssh.keys.d/
+
+mkdir -p $WORKDIR/$PROJECT/etc/sudoers.d
+cp -rf $SOURCES/configs/sudoers/* $WORKDIR/$PROJECT/etc/sudoers.d/
+
+mkdir -p $WORKDIR/$PROJECT/etc/sysctl.d
+cp -rf $SOURCES/configs/sysctl/* $WORKDIR/$PROJECT/etc/sysctl.d/
+
+mkdir -p $WORKDIR/$PROJECT/lib/systemd/system
+cp -rf $SOURCES/configs/systemd/* $WORKDIR/$PROJECT/lib/systemd/system/
+
+#
+# Build package
+#
+cd $WORKDIR
+fakeroot dpkg-deb --build $PROJECT

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+  remove|deconfigure|abort-install)
+    systemctl stop emervpn >/dev/null 2>&1
+    systemctl disable emervpn >/dev/null 2>&1
+  ;;
+esac
+
+exit 0

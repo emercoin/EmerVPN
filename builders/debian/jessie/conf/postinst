@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+  configure)
+    sysctl -p /etc/sysctl.d/emervpn.conf >/dev/null 2>&1 || true
+    systemctl daemon-reload >/dev/null 2>&1 || true
+    systemctl restart emervpn >/dev/null 2>&1 || true
+    systemctl enable emervpn >/dev/null 2>&1 || true
+  ;;
+esac
+
+exit 0
