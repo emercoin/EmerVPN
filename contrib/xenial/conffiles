@@ -6,5 +6,3 @@
 /etc/emervpn/emervpn.conf
 /etc/emervpn/emervpn.crt
 /etc/emervpn/emervpn.key
-/etc/sudoers.d/emervpn
-/etc/sysctl.d/emervpn.conf
