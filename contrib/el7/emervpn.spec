@@ -22,11 +22,11 @@ EmerVPN Service
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/emervpn $RPM_BUILD_ROOT/etc/emercoin/emcssh.keys.d $RPM_BUILD_ROOT/etc/sudoers.d $RPM_BUILD_ROOT/etc/sysctl.d $RPM_BUILD_ROOT/lib/systemd/system
-%{__cp} -f configs/emervpn/* $RPM_BUILD_ROOT/etc/emervpn
-%{__cp} -f configs/emcssh/* $RPM_BUILD_ROOT/etc/emercoin/emcssh.keys.d
-%{__cp} -f configs/sudoers/* $RPM_BUILD_ROOT/etc/sudoers.d
-%{__cp} -f configs/sysctl/* $RPM_BUILD_ROOT/etc/sysctl.d
-%{__cp} -f configs/systemd/* $RPM_BUILD_ROOT/lib/systemd/system
+%{__cp} -rf configs/emervpn/* $RPM_BUILD_ROOT/etc/emervpn
+%{__cp} -rf configs/emcssh/* $RPM_BUILD_ROOT/etc/emercoin/emcssh.keys.d
+%{__cp} -rf configs/sudoers/* $RPM_BUILD_ROOT/etc/sudoers.d
+%{__cp} -rf configs/sysctl/* $RPM_BUILD_ROOT/etc/sysctl.d
+%{__cp} -rf configs/systemd/* $RPM_BUILD_ROOT/lib/systemd/system
 
 %clean
 %{__rm} -rf $RPM_BUILD_ROOT
