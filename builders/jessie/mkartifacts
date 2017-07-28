@@ -3,7 +3,7 @@
 # Default parameters
 #
 PROJECT="emervpn"
-SOURCES="$(dirname $(readlink -m $0))/../../.."
+SOURCES="$(dirname $(readlink -m $0))/../.."
 WORKDIR="$(dirname $(readlink -m $0))/ARTIFACTS"
 
 #
