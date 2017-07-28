@@ -37,7 +37,7 @@ done
 rm -rf $WORKDIR
 
 mkdir -p $WORKDIR/$PROJECT/DEBIAN
-cp -rf $SOURCES/contrib/jessie/* $WORKDIR/$PROJECT/DEBIAN/
+cp -f $(find $SOURCES/contrib/jessie -type f) $WORKDIR/$PROJECT/DEBIAN/
 rm -f $WORKDIR/$PROJECT/DEBIAN/mkartifacts
 
 mkdir -p $WORKDIR/$PROJECT/etc/emervpn
