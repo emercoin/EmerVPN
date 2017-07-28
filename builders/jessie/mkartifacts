@@ -37,7 +37,8 @@ done
 rm -rf $WORKDIR
 
 mkdir -p $WORKDIR/$PROJECT/DEBIAN
-cp -rf $SOURCES/builders/debian/jessie/conf/* $WORKDIR/$PROJECT/DEBIAN/
+cp -rf $SOURCES/builders/jessie/* $WORKDIR/$PROJECT/DEBIAN/
+rm -f $WORKDIR/$PROJECT/DEBIAN/mkartifacts
 
 mkdir -p $WORKDIR/$PROJECT/etc/emervpn
 cp -rf $SOURCES/configs/emervpn/* $WORKDIR/$PROJECT/etc/emervpn/
