@@ -37,7 +37,7 @@ done
 rm -rf $WORKDIR
 
 mkdir -p $WORKDIR/$PROJECT/DEBIAN
-cp -rf $SOURCES/builders/xenial/* $WORKDIR/$PROJECT/DEBIAN/
+cp -rf $SOURCES/contrib/xenial/* $WORKDIR/$PROJECT/DEBIAN/
 rm -f $WORKDIR/$PROJECT/DEBIAN/mkartifacts
 
 mkdir -p $WORKDIR/$PROJECT/etc/emervpn
