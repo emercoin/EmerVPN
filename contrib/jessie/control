@@ -5,5 +5,5 @@ Architecture: all
 Section: net
 Priority: optional
 Description: EmerVPN Service
-Pre-Depends: debconf, openvpn
+Pre-Depends: debconf, openvpn, resolvconf
 Depends: emercoin, emcssh, iptables
